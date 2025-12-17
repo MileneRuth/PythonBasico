@@ -1,0 +1,3 @@
+numeros = [1,2,3,4,5,6,7,8,9,10,11,'a',True]
+comprimento = len(numeros)
+print("o comprimento da lista é:",comprimento)

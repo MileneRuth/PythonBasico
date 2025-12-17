@@ -1,0 +1,5 @@
+print( type('otavio'))
+print( type(0))
+print( type(0.5))
+print( type(True))
+print( type( 1+1j))
