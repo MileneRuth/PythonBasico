@@ -6,7 +6,7 @@ id = sex = cont = 0
 print('Olá preciso de algumas informações para cadastro')
 while True:
     idade = int(input('poderia me informa a idade: '))
-    sexo = str(input('poderia me infroma o Sexo:[f][m] ')).lower()
+    sexo = str(input('poderia me informa o Sexo:[f][m] ')).lower()
     if idade == 18:
         id += 1
     if sexo == 'm':
