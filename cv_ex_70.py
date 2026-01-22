@@ -1,27 +1,21 @@
-'''Crie um programa que leia o nome e o preço de vários produtos. O programa deverá perguntar se o usuário vai continua, No final, mostre 
-a) qual e o total gasto na compra 
-b) quantos produtos custam mais de R$1000
-c) Qual e o nome do produto mais barato '''
-tot = cont = total = menor = 0
-print('mercadinho da Ruth')
+total = totmil = menor = cont = 0
+barato = ''
 while True:
-    produto = str(input('Digite o nome do produto: '))
-    valor = float(input('Digite agora o Preço do produto R$: '))
-    cont =+ 1
-    total  += valor
-    if valor > 1000:
-         tot += 1
-    if cont == 1:
-        menor = valor
-    else:
-        if valor < menor:
-            menor = valor
-    resp = ' '
+    produto = str(input('Nome do produto: '))
+    preço = float(input('Preço: R$ '))
+    cont += 1 
+    total += preço
+    if preço < 1000:
+        totmil +=1
+    if cont == 1 or preço < menor:
+        menor = preço
+        barato = produto
+    resp =' '
     while resp not in 'SN':
-        resp = str(input('Quer continua? [S/N]')).strip().upper()[0]
+        resp = str(input('Gostaria de continua? [S/N] ')).strip().upper()[0]
     if resp == 'N':
-            break
-print('{:-^40}'.format('Fim do programa'))
-print(f'O total da compra foi de {total:.2f}')
-print(f'Temos {tot} produtos  que custa mais de R$ 1.000,00.')
-print(f'O produto mais barato custa R${menor:.2f}')
+        break
+print('{:-^40} Fim do programa ')
+print(f'O total da compra foi de {total}')
+print(f'Temos {totmil} produtos que custam mais de 1.000,00 reais')
+print(f'O produto mais barato foi {barato} que custou R${menor}')
