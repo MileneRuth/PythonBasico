@@ -3,18 +3,22 @@ OBS só considere que o caixa possui cédulas de R$ 50 , 20, 10 e 1.
 '''
 print('Banco da MIMI')
 print('So temos notas de R$50, R$20, R$10 e R$1')
+valor = int(input('Digite valor a ser sacado R$: '))
 nota = 50
+totnota = 0
 while True:
-    valor = int(input('Digite valor a ser sacado R$: '))
-    soma = nota / valor
-    if soma == 2:
-        five +=1
-        if soma < 20:
-            vintao +=1
-            if soma < 10:
-                ten +=1
-                if soma < 1:
-                    one +=1
-                else:
-                    break
-print(' Retire os seguintes valores no ghiche {five} notas de R$50 e {vintao} notas de R$20 e {ten} notas de R$10, e por fim {one}notas de 1 real, somando os {valor}')
+    if valor >= nota:
+        valor -= nota
+        totnota += 1
+    else:
+        print(f'Total de {totnota} cédulas de R${nota}')
+        if nota == 50:
+            nota = 20
+        elif nota == 20:
+            nota = 10
+        elif nota == 10:
+            nota = 1
+        totnota = 0
+        if valor == 0:
+            break
+print('Tchau')
