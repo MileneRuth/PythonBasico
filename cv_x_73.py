@@ -1,0 +1,12 @@
+times = 'Bragantino','Palmeiras','Chapecoense','Mirassol','Fluminense','Bahia','São Paulo','Botafogo','Grêmio','Atetico-PR','Curitiba','EC Vitoria','Flamengo','Atlético','Vasco da Gama','Internacional','Santos','Remo','Corinthians','Cruzeiro'
+times_ord = tuple(sorted(times))
+print('Brasileirão 2026',times[0:])
+print(30*'=')
+print('Os 5 primeiros são', times[0:5])
+print(30*'=')
+print('Os 4 ultimos colocados são ',times[-4:])
+print(30*'=')
+print(f'Em ordem alfabeticas eles ficam assim {times_ord}')
+print(30*'=')
+print(f' o chapeconse esta na posição {times.index("Chapecoense")+1}ª')
+print('OBRIGADO')
